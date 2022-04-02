@@ -53,10 +53,10 @@ jobs:
           sudo rm -rf /Applications/Firefox.app
           sudo rm -rf /Applications/Google\ Chrome.app
 
-      - name: Install dependencies
+      - name: Install playbook dependencies
         run: |
           set -eux
-          sudo pip3 install ansible
+          sudo pip3 install setuptools_rust ansible
 
       - name: Set up the test environment.
         run: |
