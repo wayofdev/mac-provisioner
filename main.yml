@@ -1,52 +1,53 @@
 ---
+- hosts: all
 
-vars_files:
-  - configs/main.yml
-  - configs/dock.yml
-  - configs/dotfiles.yml
-  - configs/homebrew.yml
-  - configs/homebrew-casks.yml
-  - configs/mas.yml
-  - configs/osx.yml
-  - configs/packages.yml
-  - configs/sublime-text.yml
-  - configs/sudoers.yml
-  - configs/post-provision.yml
+  vars_files:
+    - configs/main.yml
+    - configs/dock.yml
+    - configs/dotfiles.yml
+    - configs/homebrew.yml
+    - configs/homebrew-casks.yml
+    - configs/mas.yml
+    - configs/osx.yml
+    - configs/packages.yml
+    - configs/sublime-text.yml
+    - configs/sudoers.yml
+    - configs/post-provision.yml
 
-pre_tasks:
-  - name: Include custom playbook configuration.
-    include_vars: "{{ item }}"
-    with_fileglob:
-      - "{{ playbook_dir }}/config.yml"
-    tags: ['always']
+  pre_tasks:
+    - name: Include custom playbook configuration.
+      include_vars: "{{ item }}"
+      with_fileglob:
+        - "{{ playbook_dir }}/config.yml"
+      tags: ['always']
 
-roles:
-  - role: elliotweiser.osx-command-line-tools
+  roles:
+    - role: elliotweiser.osx-command-line-tools
 
-  - role: geerlingguy.mac.homebrew
-    tags: ['homebrew']
+    - role: geerlingguy.mac.homebrew
+      tags: ['homebrew']
 
-  - role: geerlingguy.dotfiles
-    when: configure_dotfiles
-    tags: ['dotfiles']
+    - role: geerlingguy.dotfiles
+      when: configure_dotfiles
+      tags: ['dotfiles']
 
-  - role: lotyp.dnsmasq
-    when: configure_dnsmasq
-    tags: ['dnsmasq']
+    - role: lotyp.dnsmasq
+      when: configure_dnsmasq
+      tags: ['dnsmasq']
 
-  - role: lwalley.iterm2
-    when: configure_iterm2
-    tags: ['iterm2']
+    - role: lwalley.iterm2
+      when: configure_iterm2
+      tags: ['iterm2']
 
-  - role: geerlingguy.mac.mas
-    when: mas_installed_apps or mas_installed_app_ids
-    tags: ['mas']
+    - role: geerlingguy.mac.mas
+      when: mas_installed_apps or mas_installed_app_ids
+      tags: ['mas']
 
-  - role: geerlingguy.mac.dock
-    when: configure_dock
-    tags: ['dock']
+    - role: geerlingguy.mac.dock
+      when: configure_dock
+      tags: ['dock']
 
-tasks:
-  - import_tasks: tasks/terminal.yml
-    when: configure_terminal
-    tags: ['terminal']
+  tasks:
+    - import_tasks: tasks/terminal.yml
+      when: configure_terminal
+      tags: ['terminal']
