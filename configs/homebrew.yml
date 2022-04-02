@@ -8,7 +8,7 @@ homebrew_taps:
   - homebrew/cask-versions
   - homebrew/cask-fonts
   - buo/cask-upgrade # https://github.com/buo/homebrew-cask-upgrade
-  - popcorn-official/popcorn-desktop
+  - popcorn-official/popcorn-desktop https://github.com/popcorn-official/popcorn-desktop.git
   - lotyp/homebrew-cask
 
 homebrew_installed_packages:
