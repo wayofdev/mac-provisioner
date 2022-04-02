@@ -1,0 +1,14 @@
+---
+
+configure_dotfiles: true
+dotfiles_repo: https://github.com/lotyp/dotfiles.git
+dotfiles_repo_version: master
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
+dotfiles_home: "~"
+dotfiles_files:
+  - .zshrc
+  - .gitignore
+  - .inputrc
+  - .osx
+  - .vimrc
