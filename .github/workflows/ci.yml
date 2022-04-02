@@ -25,6 +25,7 @@ jobs:
 
       - name: Install test dependencies.
         run: |
+          pip3 install --upgrade pip
           pip3 install ansible ansible-lint yamllint
           ansible-galaxy install -r requirements.yml
 
@@ -56,6 +57,7 @@ jobs:
       - name: Install playbook dependencies
         run: |
           set -eux
+          sudo pip3 install --upgrade pip
           sudo pip3 install setuptools_rust ansible
 
       - name: Set up the test environment.
