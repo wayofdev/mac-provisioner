@@ -9,12 +9,6 @@ on:  # yamllint disable-line rule:truthy
   pull_request:
     branches:
       - master
-  workflow_dispatch:
-    inputs:
-      shouldPublishImage:
-        description: 'Should publish image to Ansible Galaxy? (yes/no)'
-        required: false
-        default: 'no'
 
 jobs:
   lint:
@@ -38,9 +32,6 @@ jobs:
         run: |
           yamllint .
           ansible-lint
-      - name: Run ansible lint
-        working-directory: tests
-        run: ansible-lint test.yml -c ../.ansible-lint
 
   integration:
     name: Integration
@@ -69,9 +60,9 @@ jobs:
 
       - name: Set up the test environment.
         run: |
-          cp tests/ansible.cfg ./ansible.cfg
-          cp tests/inventory ./inventory
-          cp tests/config.yml ./config.yml
+          # cp tests/ansible.cfg ./ansible.cfg
+          # cp tests/inventory ./inventory
+          # cp tests/config.yml ./config.yml
           ansible-galaxy install -r requirements.yml
 
       - name: Test the playbook's syntax.
