@@ -6,7 +6,7 @@ homebrew_cask_apps:
   #
   - firefox
   - google-chrome
-  - tor
+  - tor-browser
   #
   ######################################## Compression
   #
