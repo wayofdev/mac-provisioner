@@ -93,7 +93,8 @@ homebrew_cask_apps:
   #
   ######################################## Productivity
   #
-  - be-focused-pro-alt
+  # - be-focused-pro-alt
+  - focus-alt
   - miro
   - notion
   - obsidian
