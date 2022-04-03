@@ -1,8 +1,6 @@
 ---
 
 homebrew_taps:
-  - homebrew/core
-  - homebrew/cask
   - thoughtbot/formulae
   - homebrew/cask-drivers
   - homebrew/cask-versions

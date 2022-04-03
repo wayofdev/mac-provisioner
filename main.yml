@@ -5,7 +5,7 @@
     - configs/main.yml
     - configs/dock.yml
     - configs/dotfiles.yml
-    - configs/homebrew.yml
+    - configs/homebrew-casks.yml
     - configs/homebrew-casks.yml
     - configs/mas.yml
     - configs/osx.yml
