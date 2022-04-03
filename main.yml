@@ -35,10 +35,6 @@
       when: configure_dnsmasq
       tags: ['dnsmasq']
 
-#    - role: lwalley.iterm2
-#      when: configure_iterm2
-#      tags: ['iterm2']
-
     - role: geerlingguy.mac.mas
       when: mas_installed_apps or mas_installed_app_ids
       tags: ['mas']

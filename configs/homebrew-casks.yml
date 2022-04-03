@@ -51,7 +51,6 @@ homebrew_cask_apps:
   #
   # - deezer
   - elmedia-player-alt
-  # - popcorn-time
   # - spotify
   # - vlc
   # - webtorrent
