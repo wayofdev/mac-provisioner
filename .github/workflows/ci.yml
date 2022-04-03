@@ -63,7 +63,7 @@ jobs:
       - name: Set up the test environment.
         run: |
           cp tests/ansible.cfg ./ansible.cfg
-          cp tests/inventory ./inventory
+          cp tests/inventory.yml ./inventory.yml
           cp tests/configs/homebrew-casks.yml ./configs/homebrew-casks.yml
           ansible-galaxy install -r requirements.yml
 
