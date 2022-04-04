@@ -2,8 +2,6 @@
 
 homebrew_cask_apps:
   - firefox
-  - docker
-  - iterm2
   - logitech-options
   - font-hack-nerd-font
   - font-meslo-for-powerline

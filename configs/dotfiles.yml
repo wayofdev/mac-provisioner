@@ -4,11 +4,22 @@ configure_dotfiles: true
 dotfiles_repo: https://github.com/lotyp/dotfiles.git
 dotfiles_repo_version: master
 dotfiles_repo_accept_hostkey: true
-dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
+dotfiles_repo_local_destination: ~/Projects/github/lotyp/dotfiles
 dotfiles_home: "~"
 dotfiles_files:
-  - .zshrc
-  - .gitignore
-  - .inputrc
+  - .curlrc
+  - .editorconfig
+  - .gitattributes
+  - .gitconfig
+  - .hushlogin
+  - .mackup.cfg
   - .osx
+  - .p10k.zsh
+  - .screenrc
+  - .tmux.conf
   - .vimrc
+  - .wgetrc
+  - .zsh_aliases
+  - .zsh_exports
+  - .zsh_functions
+  - .zshrc
