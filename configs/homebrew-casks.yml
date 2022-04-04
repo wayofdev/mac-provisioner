@@ -1,28 +1,20 @@
 ---
 
 homebrew_cask_apps:
-  #
-  ######################################## Browsing
-  #
+  ### Browsing
   - firefox
   - google-chrome
   - tor-browser
-  #
-  ######################################## Compression
-  #
+  ### Compression
   - betterzip-alt
   - keka
   - kekaexternalhelper
-  #
-  ######################################## Databases
-  #
+  ### Databases
   - navicat-premium-alt
   # - sequel-ace
   # - tableplus
-  #
-  ######################################## Developer Utilities
-  #
-  - cheatsheet # https://www.mediaatelier.com/CheatSheet - Hold the ⌘-Key to get a list of all active shortcuts of the current application.
+  ### Developer Utilities
+  - cheatsheet
   - dash-alt
   - docker
   - github
@@ -30,47 +22,34 @@ homebrew_cask_apps:
   - paw-alt
   - postman
   - ssh-config-editor-alt
-  #
-  ######################################## Drivers
-  #
-  - chromedriver # https://chromedriver.chromium.org/
+  ### Drivers
+  - chromedriver
   - logitech-options
-  #
-  ######################################## Editors
-  #
+  ### Editors
   # - coderunner-alt
   - jetbrains-toolbox
   # - sublime-merge-dev
   - sublime-merge-dev-alt
   # - sublime-text-dev
   - sublime-text-dev-alt
-  - tinkerwell # https://tinkerwell.app/ - Must-have tinker tool for every PHP and Laravel developer.
-  - typora # https://typora.io - Simple and configurable document editor that provides excellent Markdown support.
-  #
-  ######################################## Entertainment
-  #
+  - tinkerwell
+  - typora
+  ### Entertainment
   # - deezer
   - elmedia-player-alt
   # - spotify
   # - vlc
   # - webtorrent
-  #
-  ######################################## File Transferring
-  #
+  ### File Transferring
   - cyberduck
   - forklift-alt
   - transmission
   # - transmit
-  #
-  ######################################## Fonts
-  #
+  ### Fonts
   - font-fira-code
   - font-hack-nerd-font
   - font-meslo-for-powerline
-  #
-  ######################################## Helpers
-  #
-  # https://github.com/sindresorhus/quick-look-plugins
+  ### Helpers
   - apparency
   - qlcolorcode
   - qlimagesize
@@ -80,9 +59,7 @@ homebrew_cask_apps:
   - quicklook-json
   - quicklookase
   - suspicious-package
-  #
-  ######################################## Messaging
-  #
+  ### Messaging
   - discord
   # - microsoft-teams
   - skype
@@ -90,9 +67,7 @@ homebrew_cask_apps:
   - telegram
   - whatsapp
   # - zoom
-  #
-  ######################################## Productivity
-  #
+  ### Productivity
   # - be-focused-pro-alt
   - focus-alt
   - miro
@@ -100,9 +75,7 @@ homebrew_cask_apps:
   - obsidian
   - staruml-alt
   - todoist
-  #
-  ######################################## Security
-  #
+  ### Security
   - 1password-beta
   - adguard
   - adguard-vpn
@@ -113,22 +86,16 @@ homebrew_cask_apps:
   - ngrok
   - nordvpn
   # - tunnelblick
-  #
-  ######################################## Storage
-  #
+  ### Storage
   - dropbox
   - google-drive
   # - megasync
-  #
-  ######################################## Utilities
-  #
+  ### Utilities
   - a-better-finder-rename-alt
   - alfred-alt
   - appcleaner
   # - new-file-menu-alt
-  - numi-alt # https://github.com/nikolaeu/numi - Beautiful calculator app for macOS
-  #
-  ######################################## Virtualization
-  #
+  - numi-alt
+  ### Virtualization
   # - vagrant
   - virtualbox

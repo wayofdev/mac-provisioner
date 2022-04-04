@@ -1,0 +1,9 @@
+---
+
+homebrew_taps:
+  - thoughtbot/formulae
+  - homebrew/cask-drivers
+  - homebrew/cask-versions
+  - homebrew/cask-fonts
+  - buo/cask-upgrade
+  - lotyp/homebrew-cask

@@ -1,70 +1,48 @@
 ---
 
-homebrew_taps:
-  - thoughtbot/formulae
-  - homebrew/cask-drivers
-  - homebrew/cask-versions
-  - homebrew/cask-fonts
-  - buo/cask-upgrade
-  - lotyp/homebrew-cask
-
 homebrew_installed_packages:
   ################## Core formulates
-  # https://github.com/mathiasbynens/dotfiles/blob/main/brew.sh
-  # Install GNU core utilities (those that come with macOS are outdated).
-  # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
   - coreutils
   - moreutils
-  # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
   - findutils
   - bash
-  # ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
-  # export PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
-  # export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
-  # export PATH="$(brew --prefix)/opt/grep/libexec/gnubin:$PATH"
   - autoconf
-  - gpg # GNU Privacy Guard
+  - gpg
   - make
   - openssl
   - gnu-sed
-  - gnupg # Install GnuPG to enable PGP-signing commits.
+  - gnupg
   - grep
-  #
-  #
   ################################ Other
-  #
-  # - ansible # Installed via Pip.
-  # - yamllint install via pip3
-  - act # Run your GitHub Actions locally: https://github.com/nektos/act
-  - bfg # Remove large files or passwords from Git history like git-filter-branch
+  - act
+  - bfg
   - composer
   - cowsay
   - curl
-  - dive # Tool for exploring each layer in a docker image
+  - dive
   - dockerize
-  - dockutil # Command line tool for managing dock items
+  - dockutil
   - gettext
-  - gh # github cli
+  - gh
   - git
-  - git-lfs # https://github.com/git-lfs/git-lfs - Git extension for versioning large files
+  - git-lfs
   - gmp
-  - go # golang
-  - goss
+  - go
   - helm
   - htop
-  - httpie # https://httpie.io - HTTPie is making APIs simple and intuitive for those building the tools of our time.
-  - hub # https://hub.github.com - Add GitHub support to git on the command-line
-  - iperf # https://iperf.fr - Tool for active measurements of the maximum achievable bandwidth on IP networks.
-  - jq # Lightweight and flexible command-line JSON processor
+  - httpie
+  - hub
+  - iperf
+  - jq
   - kafka
   - kubectx
   - libevent
   - lua
-  - lynx # Text-based web browser
-  - mackup # Keep your application settings in sync.
+  - lynx
+  - mackup
   - mcrypt
   - midnight-commander
-  - mkcert # A simple zero-config tool to make locally trusted development certificates.
+  - mkcert
   - mpdecimal
   - nano
   - nmap
@@ -78,12 +56,12 @@ homebrew_installed_packages:
   - postgresql
   - pre-commit
   - pv
-  - rcm # Dotfile management tool
+  - rcm
   - readline
-  - rlwrap # Readline wrapper: adds readline support to tools that lack it
+  - rlwrap
   - rtmpdump
   - screen
-  - shellcheck # Static analysis and lint tool, for (ba)sh scripts
+  - shellcheck
   - sqlite
   - ssh-copy-id
   - terraform
@@ -91,10 +69,10 @@ homebrew_installed_packages:
   - tmux
   - tree
   - typescript
-  - vbindiff # https://www.cjmweb.net/vbindiff - Visual Binary Diff
+  - vbindiff
   - vim
   - wget
-  - whalebrew # Homebrew, but with Docker images
-  - wrk # https://github.com/wg/wrk - Modern HTTP benchmarking tool
+  - whalebrew
+  - wrk
   - xz
-  - zsh-history-substring-search # https://github.com/zsh-users/zsh-history-substring-search - 🐠 ZSH port of Fish history search (up arrow)
+  - zsh-history-substring-search

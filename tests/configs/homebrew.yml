@@ -1,0 +1,24 @@
+---
+
+homebrew_installed_packages:
+  - bash
+  - autoconf
+  - make
+  - cowsay
+  - curl
+  - gettext
+  - gh
+  - git
+  - mackup
+  - nano
+  - openssh
+  - pre-commit
+  - pv
+  - rcm
+  - readline
+  - screen
+  - ssh-copy-id
+  - tmux
+  - vim
+  - wget
+  - wrk

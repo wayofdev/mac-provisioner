@@ -64,6 +64,7 @@ jobs:
         run: |
           cp tests/ansible.cfg ./ansible.cfg
           cp tests/inventory.yml ./inventory.yml
+          cp tests/configs/homebrew.yml ./configs/homebrew.yml
           cp tests/configs/homebrew-casks.yml ./configs/homebrew-casks.yml
           ansible-galaxy install -r requirements.yml
 
