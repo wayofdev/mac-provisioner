@@ -1,8 +1,5 @@
 ---
 
-mas_email: ""
-mas_password: ""
-
 mas_uninstalled_apps:
   - {id: 682658836, name: "GarageBand"}
 

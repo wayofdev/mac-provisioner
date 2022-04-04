@@ -66,6 +66,7 @@ jobs:
           cp tests/inventory.yml ./inventory.yml
           cp tests/configs/homebrew.yml ./configs/homebrew.yml
           cp tests/configs/homebrew-casks.yml ./configs/homebrew-casks.yml
+          cp tests/configs/mas.yml ./configs/mas.yml
           ansible-galaxy install -r requirements.yml
 
       - name: Test the playbook's syntax.

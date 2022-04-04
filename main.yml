@@ -1,6 +1,13 @@
 ---
 - hosts: all
 
+  vars_prompt:
+    - name: mas_email
+      prompt: "Enter your icloud username ?"
+      private: false
+    - name: mas_password
+      prompt: "Enter your icloud password ?"
+
   vars_files:
     - configs/main.yml
     - configs/dotfiles.yml
