@@ -19,9 +19,9 @@
       default: false
 
     - name: gpg_id
-      prompt: "What's your GPG key's short ID?"
+      prompt: >
+        What's your GPG key's short ID? Leave blank if don't have one...
       private: false
-      when: gpg_signing
 
   vars_files:
     - group_vars/main.yml
