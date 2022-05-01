@@ -40,16 +40,16 @@ jobs:
     strategy:
       matrix:
         os:
-          - macos-11
+          - macos-12
 
     steps:
-      - name: Check out the codebase.
+      - name: Check out the codebase
         uses: actions/checkout@v2
 
-      - name: Uninstall GitHub Actions' built-in Homebrew.
+      - name: Uninstall GitHub Actions' built-in Homebrew
         run: tests/uninstall-homebrew.sh
 
-      - name: Uninstall GitHub Actions' built-in browser installs.
+      - name: Uninstall GitHub Actions' built-in browser installs
         run: |
           sudo rm -rf /Applications/Firefox.app
           sudo rm -rf /Applications/Google\ Chrome.app
@@ -60,22 +60,22 @@ jobs:
           sudo pip3 install --upgrade pip
           sudo pip3 install setuptools_rust ansible
 
-      - name: Set up the test environment.
+      - name: Set up the test environment
         run: |
-          cp tests/configs/homebrew.yml ./configs/homebrew.yml
-          cp tests/configs/homebrew-casks.yml ./configs/homebrew-casks.yml
-          cp tests/configs/mas.yml ./configs/mas.yml
+          cp tests/group_vars/homebrew.yml ./group_vars/homebrew.yml
+          cp tests/group_vars/homebrew-casks.yml ./group_vars/homebrew-casks.yml
+          cp tests/group_vars/mas.yml ./group_vars/mas.yml
           ansible-galaxy install -r requirements.yml
 
       - name: Test the playbook's syntax.
         run: ansible-playbook main.yml --syntax-check
 
-      - name: Test the playbook.
+      - name: Test the playbook
         run: ansible-playbook main.yml
         env:
           ANSIBLE_FORCE_COLOR: '1'
 
-      - name: Idempotence check.
+      - name: Idempotence check
         run: |
           idempotence=$(mktemp)
           ansible-playbook main.yml | tee -a ${idempotence}
