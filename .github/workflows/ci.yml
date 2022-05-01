@@ -62,8 +62,6 @@ jobs:
 
       - name: Set up the test environment.
         run: |
-          cp tests/ansible.cfg ./ansible.cfg
-          cp tests/inventory.yml ./inventory.yml
           cp tests/configs/homebrew.yml ./configs/homebrew.yml
           cp tests/configs/homebrew-casks.yml ./configs/homebrew-casks.yml
           cp tests/configs/mas.yml ./configs/mas.yml
@@ -81,6 +79,8 @@ jobs:
         run: |
           idempotence=$(mktemp)
           ansible-playbook main.yml | tee -a ${idempotence}
-          tail ${idempotence} | grep -q 'changed=0.*failed=0' && (echo 'Idempotence test: pass' && exit 0) || (echo 'Idempotence test: fail' && exit 1)
+          tail ${idempotence} | grep -q 'changed=0.*failed=0'
+            && (echo 'Idempotence test: pass' && exit 0)
+            || (echo 'Idempotence test: fail' && exit 1)
         env:
           ANSIBLE_FORCE_COLOR: '1'

@@ -1,0 +1,29 @@
+---
+
+# Set to 'true' to configure the Dock via https://github.com/kcrawford/dockutil.
+configure_dock: true
+dockitems_remove:
+  - "Launchpad"
+  - "Safari"
+  - "Messages"
+  - "Mail"
+  - "Maps"
+  - "Photos"
+  - "FaceTime"
+  - "Calendar"
+  - "Contacts"
+  - "Reminders"
+  - "Notes"
+  - "TV"
+  - "Music"
+  - "Podcasts"
+  - "Keynote"
+  - "Numbers"
+  - "Pages"
+  - "App Store"
+  - "System Preferences"
+
+dockitems_persist:
+  - name: "Finder"
+    path: "/Applications/Sublime Text.app/"
+    pos: 1

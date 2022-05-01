@@ -16,3 +16,8 @@ sublime_package_control:
   - "SublimeLinter-contrib-yamllint"
   - "TrailingSpaces"
   - "WordCount"
+
+# https://github.com/chaosmail/ansible-roles-sublime-text
+# https://gist.github.com/amberj/5166112
+# https://stackoverflow.com/questions/192292/how-best-to-include-other-scripts !!!
+# https://github.com/chaosmail/ansible-roles-sublime-text

@@ -1,0 +1,9 @@
+---
+
+- name: Generating .zsh_secrets from template.
+  ansible.builtin.template:
+    src: zsh_secrets.j2
+    dest: "/{{ zsh_user_home_dir }}/{{ remote_regular_user }}/.zshrc"
+    force: false
+    mode: 'u=rw,go=r'
+    owner: "{{ remote_regular_user }}"

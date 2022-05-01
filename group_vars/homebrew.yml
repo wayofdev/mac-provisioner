@@ -22,6 +22,7 @@ homebrew_installed_packages:
   - dive
   - dockerize
   - dockutil
+  - duti
   - gettext
   - gh
   - git
@@ -37,14 +38,17 @@ homebrew_installed_packages:
   - kafka
   - kubectx
   - libevent
+  - lotyp/formulae/dockutil
   - lua
   - lynx
   - mackup
   - mcrypt
   - midnight-commander
   - mkcert
+  - m-cli
   - mpdecimal
   - nano
+  - neofetch
   - nmap
   - node
   - nss
@@ -62,6 +66,7 @@ homebrew_installed_packages:
   - rtmpdump
   - screen
   - shellcheck
+  - svn
   - sqlite
   - ssh-copy-id
   - terraform

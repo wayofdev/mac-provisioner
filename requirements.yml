@@ -3,6 +3,8 @@ roles:
   - name: elliotweiser.osx-command-line-tools
   - name: geerlingguy.dotfiles
   - name: lotyp.dnsmasq
+  - name: lotyp.terminal
+  - name: lotyp.osxconfig
 
 collections:
   - name: geerlingguy.mac

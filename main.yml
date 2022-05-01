@@ -1,26 +1,39 @@
 ---
-- hosts: all
+- hosts: local
 
   vars_prompt:
     - name: mas_email
-      prompt: "Enter your icloud username ?"
+      prompt: "What is your icloud username?"
       private: false
+
     - name: mas_password
-      prompt: "Enter your icloud password ?"
+      prompt: "What is your icloud password?"
+      private: true
+      unsafe: true
+
+    - name: gpg_signing
+      prompt: >
+        Do you want to use GPG signing? You will have to provide your short GPG ID?
+        no(default)=skip, yes=execute gpg signing tasks
+      private: false
+      default: false
+
+    - name: gpg_id
+      prompt: "What's your GPG key's short ID?"
+      private: false
+      when: gpg_signing
 
   vars_files:
-    - configs/main.yml
-    - configs/dotfiles.yml
-    - configs/homebrew-taps.yml
-    - configs/homebrew.yml
-    - configs/homebrew-casks.yml
-    - configs/mas.yml
-    - configs/osx.yml
-    - configs/packages.yml
-    - configs/sublime-text.yml
-    - configs/dock.yml
-    - configs/sudoers.yml
-    - configs/post-provision.yml
+    - group_vars/main.yml
+    - group_vars/dotfiles.yml
+    - group_vars/homebrew-taps.yml
+    - group_vars/homebrew.yml
+    - group_vars/homebrew-casks.yml
+    - group_vars/mas.yml
+    - group_vars/packages.yml
+    - group_vars/sublime-text.yml
+    - group_vars/dock.yml
+    - group_vars/sudoers.yml
 
   pre_tasks:
     - name: Include custom playbook configuration.
@@ -47,6 +60,14 @@
       when: configure_dotfiles
       tags: ['dotfiles']
 
+    - role: lotyp.terminal
+      when: configure_terminal
+      tags: ['terminal']
+
+    - role: lotyp.osxconfig
+      when: configure_osx
+      tags: ['osx']
+
     - role: geerlingguy.mac.dock
       when: configure_dock
       tags: ['dock']
@@ -55,3 +76,7 @@
     - import_tasks: tasks/terminal.yml
       when: configure_terminal
       tags: ['terminal']
+
+    - import_tasks: tasks/osx.yml
+      when: configure_osx
+      tags: ['osx']

@@ -16,9 +16,10 @@ homebrew_cask_apps:
   ### Developer Utilities
   - cheatsheet
   - dash-alt
+  - devtoys # https://github.com/ObuchiYuki/DevToysMac
   - docker
   - github
-  - iterm2
+  # - iterm2 # installed via ansible-terminal role
   - paw-alt
   - postman
   - ssh-config-editor-alt
@@ -47,6 +48,7 @@ homebrew_cask_apps:
   # - transmit
   ### Fonts
   - font-fira-code
+  - font-fira-mono-for-powerline
   - font-hack-nerd-font
   - font-meslo-for-powerline
   ### Helpers
@@ -73,6 +75,7 @@ homebrew_cask_apps:
   - miro
   - notion
   - obsidian
+  - onyx # System Tool
   - staruml-alt
   - todoist
   ### Security

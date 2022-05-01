@@ -1,4 +1,0 @@
----
-
-# Glob pattern to ansible task files to run after all other tasks are finished.
-post_provision_tasks: []
